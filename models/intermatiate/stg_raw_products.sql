@@ -5,7 +5,7 @@ with
  renamed as (
   select
    products_id,
-   purchSE_PRICE
+   purchSE_PRICE as purchase_price
   from source
  )
 select * from renamed
