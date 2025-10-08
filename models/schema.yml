@@ -6,7 +6,28 @@ sources:
     tables:
       - name: sales
         identifier: raw_gz_sales
+        description: "Sales of Greenweez; we have one row per product_id found in each orders_id"
+        columns:
+          - name: date_date
+            description: "Date of purchase"
+          
+
       - name: product
         identifier: raw_gz_product
+        description: "Products of Greenweez"
+        columns:
+          - name: products_id
+            description: "We can see unique product_id"
+            tests:
+              - not_null
+              - unique
+
       - name: ship
         identifier: raw_gz_ship
+        description: "Ship of Greenweez"
+        columns:
+          - name: orders_id
+            description: "Your column description"
+            tests:
+              - not_null
+              - unique
